@@ -65,11 +65,11 @@ bool PointCloudVisualizer::Initialize(const ros::NodeHandle& n) {
 
 bool PointCloudVisualizer::LoadParameters(const ros::NodeHandle& n) {
   // Load visualization parameters.
-  if (!pu::Get("visualizer/enable_visualization", enable_visualization_))
+  if (!pu::get("visualizer/enable_visualization", enable_visualization_))
     return false;
 
   // Load coordinate frames.
-  if (!pu::Get("frame_id/fixed", fixed_frame_id_)) return false;
+  if (!pu::get("frame_id/fixed", fixed_frame_id_)) return false;
 
   return true;
 }
